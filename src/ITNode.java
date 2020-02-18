@@ -30,6 +30,21 @@ public class ITNode {
             return overlapSearch(root.left,i);
         return overlapSearch(root.right,i);
     }
+    public void printConflicting(Interval [] appt, int n){
+        ITNode root = new ITNode(appt[0]);
+        for(int i =0 ; i < n ; i++ ){
+            Interval res = overlapSearch(root,appt[i]);
+            if(res != null)
+                System.out.printf("[ %s,%S ] conflicts with [ %s,%S ]\n",
+                        appt[i].getLow(),
+                        appt[i].getHigh(),
+                        res.getLow(),
+                        res.getHigh());
+
+         root.insert(root,appt[i]);
+        }
+
+    }
 
 
     public Interval getInterval() {
