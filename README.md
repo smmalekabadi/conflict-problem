@@ -1,0 +1,2 @@
+# Simple Conflict Detector
+This is a java translation of the [GeeksForGeeks](https://www.geeksforgeeks.org/given-n-appointments-find-conflicting-appointments/)  Given n appointments, find all conflicting appointments.
