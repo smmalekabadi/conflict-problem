@@ -32,7 +32,7 @@ public class ITNode {
     }
     public static void printConflicting(Interval [] appt){
         ITNode root = new ITNode(appt[0]);
-        for(int i =0 ; i < appt.length ; i++ ){
+        for(int i =1 ; i < appt.length ; i++ ){
             Interval res = overlapSearch(root,appt[i]);
             if(res != null)
                 System.out.printf("[ %s,%S ] conflicts with [ %s,%S ]\n",
