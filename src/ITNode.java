@@ -20,7 +20,7 @@ public class ITNode {
             root.max = i.getHigh();
         return root;
     }
-    public Interval overlapSearch(ITNode root, Interval i){
+    public static Interval overlapSearch(ITNode root, Interval i){
         if (root == null)
             return null;
         if(i.doOverLap(root.interval))
@@ -30,9 +30,9 @@ public class ITNode {
             return overlapSearch(root.left,i);
         return overlapSearch(root.right,i);
     }
-    public void printConflicting(Interval [] appt, int n){
+    public static void printConflicting(Interval [] appt){
         ITNode root = new ITNode(appt[0]);
-        for(int i =0 ; i < n ; i++ ){
+        for(int i =0 ; i < appt.length ; i++ ){
             Interval res = overlapSearch(root,appt[i]);
             if(res != null)
                 System.out.printf("[ %s,%S ] conflicts with [ %s,%S ]\n",
