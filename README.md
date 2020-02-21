@@ -15,4 +15,4 @@ Another way is like above code which makes a tree and check it a bit with intell
  
 
 ## Innovative Solution
-If we want to have a better outcome and if we need to be fast we could make some limitation on querying Database or we could use Client device to do some process.  
+If we want to have a better outcome and if we need to be fast we could make some limitation on querying Database or we could use Client device to do some processes.  
